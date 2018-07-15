@@ -11,5 +11,9 @@ class AhcEnvBench
     public function benchLoad()
     {
         (new Loader)->load(__DIR__ . '/../tests/test.env', true, Loader::ALL);
+
+        if ('1YZ' !== \getenv('z')) {
+            throw new \Exception('LoadEnv failed');
+        }
     }
 }
