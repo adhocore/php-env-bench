@@ -1,0 +1,45 @@
+{
+    "name": "adhocore/env-bench",
+    "description": "Benchmark some of ENV loaders/parsers for PHP",
+    "type": "library",
+    "keywords": ["php","env-bench","env","php-env","env-benchmark"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jitendra Adhikari",
+            "email": "jiten.adhikary@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ahc\\": "src/"
+        },
+        "files": []
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ahc\\Test\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0",
+        "adhocore/env": "@stable",
+        "vlucas/phpdotenv": "@stable",
+        "symfony/dotenv": "@stable",
+        "phpbench/phpbench": "@stable"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+        ],
+        "test": "vendor/bin/phpunit"
+    }
+}
