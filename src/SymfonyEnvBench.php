@@ -1,0 +1,14 @@
+<?php
+
+use Symfony\Component\Dotenv\Dotenv;
+
+class SymfonyEnvBench
+{
+    /**
+     * @Revs(1000)
+     */
+    public function benchLoad()
+    {
+        (new Dotenv)->load(__DIR__ . '/../tests/test.env');
+    }
+}

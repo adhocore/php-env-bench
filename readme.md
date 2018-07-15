@@ -1,21 +1,35 @@
 ## adhocore/env-bench
 
-[![Latest Version](https://img.shields.io/github/release/adhocore/env-bench.svg?style=flat-square)](https://github.com/adhocore/env-bench/releases)
-[![Travis Build](https://img.shields.io/travis/adhocore/env-bench/master.svg?style=flat-square)](https://travis-ci.org/adhocore/env-bench?branch=master)
-[![Scrutinizer CI](https://img.shields.io/scrutinizer/g/adhocore/env-bench.svg?style=flat-square)](https://scrutinizer-ci.com/g/adhocore/env-bench/?branch=master)
-[![Codecov branch](https://img.shields.io/codecov/c/github/adhocore/env-bench/master.svg?style=flat-square)](https://codecov.io/gh/adhocore/env-bench)
-[![StyleCI](https://styleci.io/repos/{styleci}/shield)](https://styleci.io/repos/{styleci})
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+Benchmarking env loaders/parsers for PHP.
 
-
-## Installation
-```bash
-composer require adhocore/env-bench
-
-```
+Candidates: `adhocore/env`, `vlucas/dotenv`, `symfony/dotenv`.
 
 ## Usage
-```php
-use Ahc;
 
+```bash
+git clone git@github.com/adhocore/env-bench.git
+
+cd env-bench
+
+composer install -o
+
+vendor/bin/phpbench run src --report aggregate
 ```
+
+## Preview
+
+| Property  | Value           |
+| ----------|:---------------:|
+| Machine   | XPS9360         |
+| RAM       | 16G             |
+| Processor | i7 7550U        |
+| SSD       | 512G            |
+| OS        | Ubuntu18.04 WSL |
+| PHP       | 7.2.7           |
+| PHP Ext   | Opcache+Xdebug  |
+
+[![Bench Preview](./bench.png "Bench Preview")](./bench.png)
+
+#### Caveat
+
+Retrieving has not been benchmarked because none of the other except `adhocore/env` provide a factory way of retrieval. And this **definitely** is not benchmark for native `getenv()`!
