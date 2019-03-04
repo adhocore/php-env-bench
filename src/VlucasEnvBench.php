@@ -9,7 +9,7 @@ class VlucasEnvBench
      */
     public function benchLoad()
     {
-        (new Loader(__DIR__ . '/../tests/', 'test.env'))->load();
+        (Loader::create(__DIR__.'/../tests/', 'test.env'))->load();
 
         if ('1YZ' !== \getenv('z')) {
             throw new \Exception('LoadEnv failed');
