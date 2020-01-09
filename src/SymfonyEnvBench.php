@@ -9,7 +9,9 @@ class SymfonyEnvBench
      */
     public function benchLoad()
     {
-        (new Dotenv)->load(__DIR__ . '/../tests/test.env');
+        \putenv('z=');
+
+        (new Dotenv(true))->overload(__DIR__ . '/../tests/test.env');
 
         if ('1YZ' !== \getenv('z')) {
             throw new \Exception('LoadEnv failed');

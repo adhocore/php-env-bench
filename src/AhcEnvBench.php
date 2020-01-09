@@ -10,6 +10,8 @@ class AhcEnvBench
      */
     public function benchLoad()
     {
+        \putenv('z=');
+
         (new Loader)->load(__DIR__ . '/../tests/test.env', true, Loader::ALL);
 
         if ('1YZ' !== \getenv('z')) {
