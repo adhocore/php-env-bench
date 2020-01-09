@@ -33,7 +33,7 @@ vendor/bin/phpbench run src --report aggregate
 
 ### Travis Preview
 
-[![Travis Bench Preview](https://i.imgur.com/1ZAq5A1.gif "Travis Bench Preview")](https://travis-ci.com/adhocore/env-bench/builds/79019720)
+[![Travis Bench Preview](https://i.imgur.com/1ZAq5A1.gif "Travis Bench Preview")](https://travis-ci.com/adhocore/php-env-bench/builds/79019720)
 
 
 #### Caveat
