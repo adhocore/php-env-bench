@@ -11,7 +11,7 @@ class VlucasEnvBench
     {
         \putenv('z=');
 
-        Loader::createMutable(__DIR__.'/../tests/', 'test.env', null, false)->load();
+        Loader::createMutable(__DIR__ . '/../tests/', 'test.env', null, false)->load();
 
         if ('1YZ' !== \getenv('z')) {
             throw new \Exception('LoadEnv failed');

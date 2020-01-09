@@ -1,7 +1,6 @@
 <?php
 
 use Ahc\Env\Loader;
-use Ahc\Env\Retriever;
 
 class AhcEnvBench
 {
