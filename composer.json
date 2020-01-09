@@ -29,7 +29,6 @@
         "phpbench/phpbench": "@stable"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5"
     },
     "config": {
         "optimize-autoloader": true,
@@ -38,8 +37,6 @@
         }
     },
     "scripts": {
-        "post-root-package-install": [
-        ],
-        "test": "vendor/bin/phpunit"
+        "bench": "phpbench run src --report aggregate"
     }
 }
