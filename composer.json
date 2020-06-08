@@ -24,7 +24,7 @@
     "require": {
         "php": ">=7.0.0",
         "adhocore/env": "^0.1",
-        "vlucas/phpdotenv": "^4.1",
+        "vlucas/phpdotenv": "^4.1 || ^5.0",
         "symfony/dotenv": "^5.0",
         "phpbench/phpbench": "@stable"
     },
